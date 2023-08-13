@@ -6,7 +6,8 @@ import (
 )
 
 func video(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("This is your video"))
+	w.Header().Set("Content-Type", "video/mp4")
+	http.ServeFile(w, r, "video/SampleVideo_1280x720_1mb.mp4")
 }
 
 func main() {
