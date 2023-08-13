@@ -14,4 +14,5 @@ make clean
 make test
 
 001 - Added /video and sample video
-002 - Change / to /video
+002 - Change / to /video.  Used http.ServeFile to stream video, moved video to /video folder
+003 - 
