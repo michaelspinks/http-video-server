@@ -13,6 +13,8 @@ make build
 make clean
 make test
 
+docker build -t http-video-server --file Dockerfile .
+
 001 - Added /video and sample video
 002 - Change / to /video.  Used http.ServeFile to stream video, moved video to /video folder
-003 - 
+003 - Add 405 Header, add addition of port
