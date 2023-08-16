@@ -14,7 +14,9 @@ make clean
 make test
 
 docker build -t http-video-server --file Dockerfile .
+docker run -p 3000:3000 http-video-server
 
 001 - Added /video and sample video
 002 - Change / to /video.  Used http.ServeFile to stream video, moved video to /video folder
 003 - Add 405 Header, add addition of port
+004 - Forward http request to video-storage service
